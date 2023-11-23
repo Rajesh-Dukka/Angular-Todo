@@ -1,0 +1,25 @@
+<h1 class="text-center text-primary">Angular Todo App</h1>
+<div class="mx-auto">
+  <div class="column">
+    <div class="col-6 mx-auto">
+      <div class="form-group">
+        <label for="newtask">Add Task</label>
+        <input
+          type="text"
+          class="form-control"
+          id="newTask"
+          [(ngModel)]="taskInput"
+        />
+      </div>
+    </div>
+    <div class="col-3 mx-auto mt-4">
+      <button
+        class="btn btn-success"
+        (click)="addItem()"
+        [disabled]="!taskInput.length"
+      >
+        Add
+      </button>
+    </div>
+  </div>
+</div>
