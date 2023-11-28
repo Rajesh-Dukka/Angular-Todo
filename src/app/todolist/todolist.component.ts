@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TodoserviceService } from '../todoservice.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-todolist',

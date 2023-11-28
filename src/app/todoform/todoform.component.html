@@ -1,9 +1,9 @@
-<h1 class="text-center text-primary">Angular Todo App</h1>
+<h1 class="text-center text-primary">{{ "Title" | translate }}</h1>
 <div class="mx-auto">
   <div class="column">
     <div class="col-6 mx-auto">
       <div class="form-group">
-        <label for="newtask">Add Task</label>
+        <label for="newtask">{{ "addTask" | translate }}</label>
         <input
           type="text"
           class="form-control"
@@ -12,13 +12,20 @@
         />
       </div>
     </div>
-    <div class="col-3 mx-auto mt-4">
+    <div class="col-3 m-auto mt-2">
+      <select class="form-select" (change)="ChangeLang($event)" name="" id="">
+        <option [selected]="lang === 'en'" value="en">English</option>
+        <option [selected]="lang === 'fr'" value="fr">French</option>
+        <option [selected]="lang === 'es'" value="es">Spanish</option>
+      </select>
+    </div>
+    <div class="col-3 mx-auto mt-5">
       <button
         class="btn btn-success"
         (click)="addItem()"
         [disabled]="!taskInput.length"
       >
-        Add
+        {{ "add" | translate }}
       </button>
     </div>
   </div>
